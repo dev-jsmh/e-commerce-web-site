@@ -1,3 +1,17 @@
 import { Routes } from '@angular/router';
+import { ProductDetails } from './shop/product-details/product-details';
+import { ShopIndex } from './shop/shop-index/shop-index';
+import { NotFoundPage } from './not-found-page/not-found-page';
+import { ProductList } from './shop/product-list/product-list';
 
-export const routes: Routes = [];
+export const routes: Routes = [
+    {
+        'path': "shop", component: ShopIndex,
+        children: [
+            { 'path': "", component: ProductList },
+            { 'path': 'products/:id/details', component: ProductDetails },
+        ]
+    },
+    { 'path': "", redirectTo: 'shop', pathMatch: 'full' },
+    { 'path': '**', component: NotFoundPage }
+];

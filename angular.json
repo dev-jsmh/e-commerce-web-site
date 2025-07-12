@@ -13,6 +13,13 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "scripts": [
+              "src/assets/lib/easing/easing.min.js",
+              "src/assets/lib/waypoints/waypoints.min.js",
+              "src/assets/lib/lightbox/js/lightbox.min.js",
+              "src/assets/lib/owlcarousel/owl.carousel.min.js",
+              "src/assets/js/main.js"
+            ],
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
@@ -25,7 +32,10 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/assets/css/main.css",
+              "src/assets/css/bootstrap.css",
+              "src/assets/lib/lightbox/css/lightbox.min.css",
+              "src/assets/lib/owlcarousel/assets/owl.carousel.min.css"
             ],
             "server": "src/main.server.ts",
             "outputMode": "server",
@@ -87,7 +97,7 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/assets/css/main.css"
             ]
           }
         }
