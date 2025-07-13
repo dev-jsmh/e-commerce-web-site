@@ -1,19 +1,13 @@
-<div class="rounded position-relative fruite-item">
-    <div class="fruite-img">
-        <img [src]="[product()?.image]" class="img-fluid w-100 rounded-top" alt="">
+<div class="card h-100 product-item">
+    <div class="product-img">
+        <img [src]="[product()?.image]" class="img-fluid w-100 rounded-top" alt="product-image-thumbnail">
     </div>
-    <div class="text-white bg-secondary px-3 py-1 rounded position-absolute"
-        style="top: 10px; left: 10px;">{{product().category}}</div>
-    <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+    <div class="card-body">
         <h4>{{ product().name}}</h4>
-        <p>{{ product().description}}</p>
         <p class="text-dark fs-5 fw-bold mb-3">{{ product().price}}</p>
-        <div class="text-center">
-            <button (click)="goToDetails()"
-                class="btn border border-secondary rounded-pill px-3 text-primary px-5 mb-3">View details</button>
-            <a href="#"
-                class="btn border border-secondary rounded-pill px-3 text-primary px-5"><i
-                    class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+        <div class=" d-flex flex-column text-center">
+            <a routerLink="products/{{product().id}}/details"
+                class="btn border border-secondary rounded-pill px-3 text-primary px-5 mb-3">View details</a>
         </div>
     </div>
 </div>

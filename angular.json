@@ -33,7 +33,7 @@
             ],
             "styles": [
               "src/assets/css/main.css",
-              "src/assets/css/bootstrap.css",
+              "src/assets/css/bootstrap.min.css",
               "src/assets/lib/lightbox/css/lightbox.min.css",
               "src/assets/lib/owlcarousel/assets/owl.carousel.min.css"
             ],
