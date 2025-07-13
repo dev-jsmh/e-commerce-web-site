@@ -1,0 +1,13 @@
+<div class="card h-100 product-item">
+    <div class="product-img">
+        <img [src]="[product()?.image]" class="img-fluid w-100 rounded-top" alt="product-image-thumbnail">
+    </div>
+    <div class="card-body">
+        <h4>{{ product().name}}</h4>
+        <p class="text-dark fs-5 fw-bold mb-3">{{ product().price}}</p>
+        <div class=" d-flex flex-column text-center">
+            <a routerLink="products/{{product().id}}/details"
+                class="btn border border-secondary rounded-pill px-3 text-primary px-5 mb-3">View details</a>
+        </div>
+    </div>
+</div>
